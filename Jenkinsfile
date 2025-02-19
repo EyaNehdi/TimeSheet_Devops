@@ -2,7 +2,11 @@ pipeline {
 
  agent any
 
- tools {jdk 'java-17-openjdk-amd64', maven 'apache-maven-3.0.1'}
+ environment {
+         JAVA_HOME = "/usr/lib/jvm/java-17-openjdk-amd64/"
+         M2_HOME = "/opt/apache-maven-3.6.3"
+         PATH = "$M2_HOME/bin:$PATH"
+     }
 
  stages {
 
