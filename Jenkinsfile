@@ -24,16 +24,17 @@ pipeline {
 
  stage ('Compile Stage') {
 
- steps {
+    steps {
 
- sh 'mvn clean compile'
+    sh 'mvn clean compile'
+
+    }
 
  }
-
- }
- stage('SonarQube analysis') {
+ stage ('SonarQube analysis') {
 steps{
 sh 'mvn sonar:sonar'
+}
 }
  }
 
