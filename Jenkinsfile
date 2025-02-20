@@ -34,7 +34,7 @@ pipeline {
  stage ('SonarQube analysis') {
 steps{
 withSonarQubeEnv('SonarQube') {
-  sh 'mvn sonar:sonar'
+  sh 'mvn sonar:sonar -Dsonar.projectKey=timesheet-devops -Dsonar.projectName=timesheet-devops'
 }
 }
 }
