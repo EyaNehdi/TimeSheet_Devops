@@ -35,7 +35,7 @@ pipeline {
  stage ('SonarQube analysis') {
 steps{
 withSonarQubeEnv('SonarQube') {
-  sh 'mvn sonar:sonar -Dsonar.projectKey=timesheet-devops -Dsonar.projectName=timesheet-devops -Dsonar.login=sqp_a7a981a0f4c5c712ca5f14fbf991dee4dc09af95'
+  sh 'mvn sonar:sonar -Dsonar.projectKey=timesheet-devops -Dsonar.projectName=timesheet-devops -Dsonar.login=squ_a83b39c88f38bdd4d08f4cdc83a587b046d5129f'
 }
 }
 }
